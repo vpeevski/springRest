@@ -21,7 +21,7 @@ public class UsersRest {
 		this.usersRepository = spittleRepository;
 	}
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(method = RequestMethod.GET, produces={"application/json"})
 	public List<User> users() {
 		return usersRepository.allUsers();
 	}
